@@ -1,0 +1,8 @@
+C:\Users\Даниел\Documents\GitHub\SimpleHttpServer\SimpleHttpServer.Application\bin\Debug\SimpleHttpServer.Application.exe.config
+C:\Users\Даниел\Documents\GitHub\SimpleHttpServer\SimpleHttpServer.Application\bin\Debug\SimpleHttpServer.Application.exe
+C:\Users\Даниел\Documents\GitHub\SimpleHttpServer\SimpleHttpServer.Application\bin\Debug\SimpleHttpServer.Application.pdb
+C:\Users\Даниел\Documents\GitHub\SimpleHttpServer\SimpleHttpServer.Application\bin\Debug\SimpleHttpServer.dll
+C:\Users\Даниел\Documents\GitHub\SimpleHttpServer\SimpleHttpServer.Application\bin\Debug\SimpleHttpServer.pdb
+C:\Users\Даниел\Documents\GitHub\SimpleHttpServer\SimpleHttpServer.Application\obj\Debug\SimpleHttpServer.Application.csprojResolveAssemblyReference.cache
+C:\Users\Даниел\Documents\GitHub\SimpleHttpServer\SimpleHttpServer.Application\obj\Debug\SimpleHttpServer.Application.exe
+C:\Users\Даниел\Documents\GitHub\SimpleHttpServer\SimpleHttpServer.Application\obj\Debug\SimpleHttpServer.Application.pdb

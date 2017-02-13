@@ -9,6 +9,13 @@
 
     public class HttpRequest
     {
+        #region Constructor
+        public HttpRequest()
+        {
+            this.Header = new Header(HeaderType.HttpRequest);
+        }
+        #endregion
+
         #region Properties
         public RequestMethod Method { get; set; }
 

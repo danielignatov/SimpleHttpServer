@@ -4,15 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{708C07FD-DC77-4480-9886-EA6F7C25D14B}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{8FD54364-A4E8-4490-A225-3455D70FB290}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SimpleHttpServer</RootNamespace>
-    <AssemblyName>SimpleHttpServer</AssemblyName>
+    <RootNamespace>SimpleHttpServer.Application</RootNamespace>
+    <AssemblyName>SimpleHttpServer.Application</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,12 +24,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>SimpleHttpServer.Application.Application</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -40,28 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Enums\HeaderType.cs" />
-    <Compile Include="Enums\RequestMethod.cs" />
-    <Compile Include="Enums\ResponseStatusCode.cs" />
-    <Compile Include="Models\Cookie.cs" />
-    <Compile Include="Models\CookieCollection.cs" />
-    <Compile Include="Models\Header.cs" />
-    <Compile Include="Models\HttpProcessor.cs" />
-    <Compile Include="Models\HttpRequest.cs" />
-    <Compile Include="Models\HttpResponse.cs" />
-    <Compile Include="Models\HttpResponseBuilder.cs" />
-    <Compile Include="Models\HttpServer.cs" />
-    <Compile Include="Models\Route.cs" />
-    <Compile Include="Models\StreamUtils.cs" />
+    <Compile Include="Application.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="RouteHandlers\" />
+    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\Pages\404.html" />
-    <Content Include="Resources\Pages\405.html" />
-    <Content Include="Resources\Pages\500.html" />
+    <ProjectReference Include="..\SimpleHttpServer\SimpleHttpServer.csproj">
+      <Project>{708C07FD-DC77-4480-9886-EA6F7C25D14B}</Project>
+      <Name>SimpleHttpServer</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

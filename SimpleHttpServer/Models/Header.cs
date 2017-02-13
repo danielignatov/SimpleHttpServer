@@ -32,6 +32,10 @@
         #endregion
 
         #region Methods
+        public void AddCookie(Cookie cookie)
+        {
+            this.Cookies.Add(cookie);
+        }
         public override string ToString()
         {
             StringBuilder header = new StringBuilder();

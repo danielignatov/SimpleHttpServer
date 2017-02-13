@@ -1,0 +1,5 @@
+C:\Users\Даниел\Documents\GitHub\SimpleHttpServer\SimpleHttpServer\bin\Debug\SimpleHttpServer.dll
+C:\Users\Даниел\Documents\GitHub\SimpleHttpServer\SimpleHttpServer\bin\Debug\SimpleHttpServer.pdb
+C:\Users\Даниел\Documents\GitHub\SimpleHttpServer\SimpleHttpServer\obj\Debug\SimpleHttpServer.csprojResolveAssemblyReference.cache
+C:\Users\Даниел\Documents\GitHub\SimpleHttpServer\SimpleHttpServer\obj\Debug\SimpleHttpServer.dll
+C:\Users\Даниел\Documents\GitHub\SimpleHttpServer\SimpleHttpServer\obj\Debug\SimpleHttpServer.pdb

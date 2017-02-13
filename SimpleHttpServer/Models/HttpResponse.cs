@@ -10,9 +10,10 @@
     public class HttpResponse
     {
         #region Constructor
-        public HttpResponse(ResponseStatusCode statusCode, Header header, string content)
+        public HttpResponse()
         {
-
+            this.Header = new Header(HeaderType.HttpResponse);
+            this.Content = new byte[] { };
         }
         #endregion
 
@@ -22,21 +23,7 @@
         public string StatusMessage {
             get
             {
-                StringBuilder statusMessage = new StringBuilder();
-
-                foreach (var letter in this.StatusMessage)
-                {
-                    if (letter != ' ')
-                    {
-                        statusMessage.Append(letter);
-                    }
-                    else
-                    {
-                        statusMessage.Append($"{letter} ");
-                    }
-                }
-
-                return statusMessage.ToString();
+                return Enum.GetName(typeof(ResponseStatusCode), this.StatusCode);
             }
             set
             {
@@ -48,7 +35,7 @@
 
         public byte[] Content { get; private set; }
 
-        public byte[] ContentAsUtfEight
+        public string ContentAsUtfEight
         {
             get
             {
@@ -56,11 +43,7 @@
             }
             set
             {
-                char[] chars = Encoding.Unicode.GetChars(value);
-                byte[] bytes = Encoding.Unicode.GetBytes(chars);
-
-                this.ContentAsUtfEight = bytes;
-                this.Content = bytes;
+                this.Content = Encoding.UTF8.GetBytes(value);
             }
         }
         #endregion
@@ -73,7 +56,7 @@
             response.AppendLine($"HTTP/1.0 {(int)this.StatusCode} {this.StatusMessage}");
             response.AppendLine(this.Header.ToString());
 
-            return base.ToString();
+            return response.ToString();
         }
         #endregion
     }

@@ -12,7 +12,7 @@
         #region Properties
         public string Name { get; set; }
 
-        public string UriRegex { get; set; }
+        public string UrlRegex { get; set; }
 
         public RequestMethod Method { get; set; }
 
